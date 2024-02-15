@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-50%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .info-container {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      background-color: #ffffff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .parent-div:hover .info-container {
+      display: flex;
+      animation: slideDown 0.3s forwards;
+    }
+  </style>
+</head>
+
+<body class="bg-stone-300">
+  <header class="bg-[url('img/img-fond.png')] bg-cover bg-bottom-fade h-screen">
+    <div class="bg-indigo-500 flex justify-between fixed w-screen h-16 z-50">
+      <img src="img/logo.png" alt="" class="h-12 mx-4 py-2 flex items-center h-full">
+      <nav class="flex justify-around w-full">
+        <a href="#" class="flex items-center justify-center w-full hover:bg-indigo-200 transition-colors duration-200">Accueil</a>
+        <a href="#def" class="flex items-center justify-center h-full w-full hover:bg-indigo-200 transition-colors duration-200">Définition</a>
+        <a href="#type" class="flex items-center justify-center h-full w-full hover:bg-indigo-200 transition-colors duration-200">Type d'information</a>
+        <a href="#proble" class="flex items-center justify-center h-full w-full hover:bg-indigo-200 transition-colors duration-200">Problématique</a>
+        <a href="#dev" class="flex items-center justify-center h-full w-full hover:bg-indigo-200 transition-colors duration-200">Développement</a>
+        <a href="#ex" class="flex items-center justify-center h-full w-full hover:bg-indigo-200 transition-colors duration-200">Exemple</a>
+        <a href="#solution" class="flex items-center justify-center h-full w-full hover:bg-indigo-200 transition-colors duration-200">Solution</a>
+      </nav>
+    </div>
+    <div class="h-full flex items-center justify-center">
+      <h1 class="text-5xl font-bold w-2/3 text-center py-8 bg-stone-600 bg-opacity-50 rounded-xl text-shadow">
+        Le filtre de l'information sur les réseaux sociaux
+      </h1>
+    </div>
+  </header>
+  <div class="bg-gray-100 mx-20 drop-shadow-2xl z-10">
+    <main class="m-20">
+      <section id="def" class="pt-16">
+        <h1 class="text-3xl font-bold mb-4 text-indigo-600">Definition</h1>
+        <p class="mb-3 text-gray-700 leading-relaxed px-6">
+          Réseaux sociaux : Plateforme en ligne ou application favorisant les interactions sociales, permettant de développer des liens avec des amis, des connaissances, ou des collègues en temps réel. Les utilisateurs partagent des contenus variés tels que des photos, vidéos, et messages.
+        </p>
+        <p class="mb-3 text-gray-700 leading-relaxed px-6">
+          Filtre de l'information : Conceptualisé par Eli Pariser en 2011, les bulles de filtres décrivent l'effet de la personnalisation excessive des contenus par les algorithmes sur les réseaux sociaux. Cela peut conduire à l'isolement intellectuel et informationnel de l'utilisateur en le confinant dans une bulle d'informations conformes à ses préférences.
+        </p>
+        <p class="text-gray-700 leading-relaxed px-6">
+          Algorithme : Ensemble de critères déterminant l'organisation du fil d'actualité en fonction de divers facteurs tels que l'historique de l'utilisateur, les tendances, les centres d'intérêt, etc. Les algorithmes analysent les comportements passés pour personnaliser le contenu affiché, formant ainsi les bulles de filtres.
+        </p>
+      </section>
+      <section id="type" class="pt-16">
+        <h1 class="text-3xl font-bold mb-4 text-indigo-600">
+          Type d'information sur les reseaux sociaux
+        </h1>
+        <div class="justify-between text-center px-6">
+          <div class="flex">
+            <div class="parent-div relative w-full m-3">
+              <div class="bg-indigo-200 text-3xl py-6 rounded-lg hover:bg-indigo-500 transition-colors duration-200">
+                Publication
+              </div>
+              <div class="info-container flex-col items-center justify-center">
+                <h1>Publication : Partage multimédia (image, vidéo) avec légende. Interaction via likes, commentaires. Exprime moments, pensées, expériences.</h1>
+                <img src="img/post.jpg" alt="" class="w-48">
+              </div>
+            </div>
+
+            <div class="parent-div relative w-full m-3">
+              <div class="bg-indigo-500 text-3xl py-6 rounded-lg hover:bg-indigo-200 transition-colors duration-200">
+                lien vers document extérne
+              </div>
+              <div class="info-container flex-col items-center justify-center">
+                <h1>Lien Externe : URL partagée pour accéder à un document, site web, ou contenu externe.</h1>
+                <img src="img/lien_hypertexte.jpg" alt="" class="w-48">
+              </div>
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="parent-div relative w-full m-3">
+              <div class="bg-indigo-200 text-3xl py-6 rounded-lg hover:bg-indigo-500 transition-colors duration-200">
+                Image
+              </div>
+              <div class="info-container flex-col items-center justify-center">
+                <h1>Image : Instantané visuel capturant un moment ou un concept. Exprime des émotions, partage une expérience à travers la photographie.</h1>
+                <img src="img/img-nature.avif" alt="" class="w-48">
+              </div>
+            </div>
+
+            <div class="parent-div relative w-full m-3">
+              <div class="bg-indigo-500 text-3xl py-6 rounded-lg hover:bg-indigo-200 transition-colors duration-200">
+                Video
+              </div>
+              <div class="info-container flex-col items-center justify-center">
+                <h1>Vidéo : Clip visuel narratif ou informatif. Partage d'expériences, dévoilement de contenus. Interaction via likes, commentaires.</h1>
+                <img src="img/video.jpg" alt="" class="w-48">
+              </div>
+            </div>
+
+            <div class="parent-div relative w-full m-3">
+              <div class="bg-indigo-200 text-3xl py-6 rounded-lg hover:bg-indigo-500 transition-colors duration-200">
+                Storie video
+              </div>
+              <div class="info-container flex-col items-center justify-center">
+                <h1>Storie : Brève séquence multimédia éphémère. Partage d'instantanés de la journée, du quotidien. Interaction limitée dans un laps de temps.</h1>
+                <img src="img/storie.jpg" alt="" class="w-48">
+              </div>
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="parent-div relative w-full m-3">
+              <div class="bg-indigo-500 text-3xl py-6 rounded-lg hover:bg-indigo-200 transition-colors duration-200">
+                Video en direct
+              </div>
+              <div class="info-container flex-col items-center justify-center">
+                <h1>
+                  Lives : Diffusion vidéo en direct. Interaction instantanée avec les spectateurs, partage d'événements en temps réel.</h1>
+                <img src="img/live.jpg" alt="" class="w-48">
+              </div>
+            </div>
+
+            <div class="parent-div relative w-full m-3">
+              <div class="bg-indigo-200 text-3xl py-6 rounded-lg hover:bg-indigo-500 transition-colors duration-200">
+                Blogs
+              </div>
+              <div class="info-container flex-col items-center justify-center">
+                <h1>Blogs : Articles informatifs ou personnels. Partage d'idées, expériences, analyses. Interaction par commentaires, likes.</h1>
+                <img src="img/blog.jpg" alt="" class="w-48">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="proble" class="pt-16">
+        <h1 class="text-3xl font-bold mb-4 text-indigo-600">Problematique</h1>
+        <p class="px-6">
+          Les effets produit par le filtre de l'information sur les réseaux sociaux peuvent t'ils être néfaste sur nous ?
+        </p>
+      </section>
+      <section id="dev" class="pt-16">
+        <h1 class="text-3xl font-bold mb-4 text-indigo-600">Développement</h1>
+        <p class="px-6 mb-3">
+          Depuis les années 2010, le concept médiatisé de la bulle de filtre a suscité des critiques notables en raison de l'accent mis sur le rôle déterminant des algorithmes. Cette notion pointe du doigt les répercussions de la personnalisation extrême des contenus sur les réseaux sociaux, exposant les utilisateurs à une sélection biaisée d'informations conformes à leurs préférences.
+        </p>
+        <p class="px-6">
+          Il est indéniable que le filtre de l'information sur les réseaux sociaux engendre des impacts significatifs, tant positifs que négatifs. D'un côté, il offre la capacité de trier les informations inutiles, améliorant ainsi la pertinence et la qualité des contenus consommés. Cependant, cette pratique entraîne un enfermement de l'utilisateur à un point tel qu'il est principalement exposé à des perspectives similaires, risquant de restreindre sa diversité d'idées et de contribuer à une forme d'isolement intellectuel. Cet équilibre entre filtrage bénéfique et confinement cognitif souligne l'importance cruciale de comprendre et de réguler ces dynamiques pour préserver une expérience d'information équilibrée sur les plateformes en ligne.
+        </p>
+      </section>
+      <section id="ex" class="pt-16">
+        <h1 class="text-3xl font-bold mb-4 text-indigo-600">Exemple</h1>
+        <h2 class="pl-4 text-2xl font-bold text-indigo-600">X (Twitter) :</h2>
+        <p class="pl-16 pb-8">
+          Depuis 2016, le réseaux social X s'est vu introduire un nouveau fil
+          algorithmique. Les utilisateurs qui voyaient auparavant les tweets
+          apparaître selon un ordre antichronologique verront a la place ces
+          publication selon un ordre de preference défini par l'algorithme.
+          L'algorithme opère sa selection de Tweets selon plusieurs critéres.
+          L'introduction d'un algorithme permet a X de mieux connaître ses
+          utilisateurs et la maniere dont ils interragissent sur le réseaux.
+          Ensuite, il permet d'adapter le contenu en fonction de l'utilisateur
+          et d'ainsi augmenter le dynamisme, l'engagement et l'attention sur la
+          plateforme. Enfin, le systeme est suffisament complexe pour offrir à
+          chacun des utilisateurs de X une experience personnalisée sans que
+          ceux ci se retrouvent toujours face aux même tweets quand ils se
+          connectent.
+        </p>
+
+        <h2 class="pl-4 text-2xl font-bold text-indigo-600">Facebook :</h2>
+        <p class="pl-16 pb-8">
+          Facebook compte plus d'un milliard d'utilisateurs dans le monde. C'est
+          pourquoi en 2004 Facebook doit selectionner les informations. C'est
+          grace à un algorithme qui se nomme Edge Rank concu en 2006 et
+          remplacer par Newsfeed Ranking Algorithm en 2011 que le réseaux social
+          trie ses informations a l'aide de 100 000 paramètres. Les paramètres
+          connu sont : le créateur, le post, le type, la récence. Facebook veut
+          montrer à l'utilisateur ce qui va le plus l'interresser, il veut créer
+          de la réaction.
+        </p>
+
+        <h2 class="pl-4 text-2xl font-bold text-indigo-600">Instagram :</h2>
+        <p class="pl-16 pb-8">
+          Depuis le rachat d'Instagram par Facebook, Instagram a calqué
+          l'algorithme de Facebook et utilise des paramètres comme la popularité,
+          le temps de visionnage, la consultation du profil, le nombre de like ,
+          de commentaire… Instagram n'a pas de chronologie dans fil
+          d'information.
+        </p>
+
+        <h2 class="pl-4 text-2xl font-bold text-indigo-600">Youtube :</h2>
+        <p class="pl-16">
+          Youtube est different des autres réseaux sociaux. C'est un site
+          d'hébergement de video. A la fin d'une video le site propose une video
+          similaire, se qui enferme l'utilisateur. Sont algorithme utilise des
+          criterer comme le nombre de clique, l'historique de l'utilisateur, la
+          nouveauter, le temps de visionnage.
+        </p>
+      </section>
+      <section id="solution" class="py-16">
+        <h1 class="text-3xl font-bold mb-4 text-indigo-600">Solution et initiative</h1>
+        <p class="mb-3 px-6">
+          Diverses solutions et initiatives ont émergé pour atténuer les effets des bulles de filtre, particulièrement préoccupantes dans le paysage médiatique et informationnel. Aux États-Unis, des plateformes spécialisées telles que "allsides.com" ou "hifromtheothrttide.com" ont vu le jour, offrant aux utilisateurs la possibilité de prendre conscience de la nature de ce phénomène.
+        </p>
+        <p class="mb-3 px-6">
+          Certains moteurs de recherche non personnalisés, tels que Qwant ou Ecosia, mettent en avant leur approche dépourvue de tri idéologique des résultats de recherche, contribuant ainsi à contrecarrer la formation de bulles de filtre en n'exploitant ni collectant de données pour personnaliser les contenus.
+        </p>
+        <p class="mb-3 px-6">
+          Pour une expérience de navigation plus transparente, des extensions spécifiques ont été développées pour des navigateurs web courants tels que Google Chrome ou Mozilla Firefox. Ces extensions visent à mettre en lumière les bulles de filtre, fournissant ainsi aux utilisateurs une vision plus claire et équilibrée des différentes perspectives disponibles.
+        </p>
+        <p class="mb-3 px-6">
+          En France, le journal Le Drenche adopte une approche proactive en proposant des sujets avec deux avis distincts et opposés, explicitement dans le but de combattre les bulles de filtre. Cependant, il est important de noter que cette stratégie journalistique, bien qu'affichant un objectif de neutralité, peut parfois biaiser vers des positions extrêmes, mettant potentiellement en péril la nuance et le pluralisme des opinions.
+        </p>
+        <p class="px-6">
+          Ainsi, le défi persiste dans la recherche d'un équilibre subtil entre la diversité des perspectives, la neutralité éditoriale et la préservation d'un espace d'information sain et éclairé. 
+        </p>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
